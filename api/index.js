@@ -28,9 +28,7 @@ mongoose.connect(process.env.MONGO).then(()=>{
   console.log("db not connected");
   console.log(err);
 });
-app.get("/",(req,res)=>{
-  res.send("/ end point");
-})
+
 
 app.use("/api/user",userRouter);
 app.use("/api/auth",authRouter);
